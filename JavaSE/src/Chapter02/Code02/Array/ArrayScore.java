@@ -1,4 +1,4 @@
-package Chapter02.Code02;
+package Chapter02.Code02.Array;
 
 import java.util.Scanner;
 /**

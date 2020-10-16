@@ -1,4 +1,4 @@
-package Chapter02.Code;
+package Chapter02.Code.Array;
 
 /**
  * 数组的基本语法

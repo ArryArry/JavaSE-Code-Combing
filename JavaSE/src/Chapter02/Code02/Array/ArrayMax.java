@@ -1,4 +1,4 @@
-package Chapter02.Code02;
+package Chapter02.Code02.Array;
 
 /**
  * 获取数组元素的最大值

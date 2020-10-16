@@ -1,4 +1,4 @@
-package Chapter02.Code;
+package Chapter02.Code.Array;
 
 /**
  * JVM的内存分配:
