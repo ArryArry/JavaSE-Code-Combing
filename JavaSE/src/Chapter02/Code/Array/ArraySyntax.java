@@ -1,5 +1,8 @@
 package Chapter02.Code.Array;
 
+import java.util.Arrays;
+import org.junit.Test;
+
 /**
  * 数组的基本语法
  * 数组概念： 数组就是存储数据长度固定的容器，保证多个数据的数据类型要一致。
@@ -50,73 +53,92 @@ package Chapter02.Code.Array;
  * 默认值都是null
  */
 public class ArraySyntax {
-    public static void main(String[] args) {
-        //==========数组的定义==========
-        int[] arr;
-        int arrs[];
 
-        //==========数组的初始化==========
-        //1.创建一个int类型的数组,该数组名称arrayA,可以存储3个int数据
-        int[] arrayA = new int[3];
-        //2.创建一个char类型的数组,该数组名称arrayB,存储3个char数据
-        char[] arrayB = {'a', 'b', 'c'};
-        //3.创建一个boolean类型的数组,该数组名称arrayC,可以存储2个boolean数据
-        boolean[] arrayC = new boolean[2];
-        //4.创建一个String类型的数组,该数组名称arrayD,存储3个String数据
-        String[] arrayD = new String[]{"a", "b", "c"};
+  public static void main(String[] args) {
+    //==========数组的定义==========
+    int[] arr;
+    int arrs[];
 
-        System.out.println("-----------------------");
-        //动态初始化数组,可以分为两步完成
-        float[] arrA;
-        arrA = new float[3];
-        arrA = new float[30];
+    //==========数组的初始化==========
+    //1.创建一个int类型的数组,该数组名称arrayA,可以存储3个int数据
+    int[] arrayA = new int[3];
+    //2.创建一个char类型的数组,该数组名称arrayB,存储3个char数据
+    char[] arrayB = {'a', 'b', 'c'};
+    //3.创建一个boolean类型的数组,该数组名称arrayC,可以存储2个boolean数据
+    boolean[] arrayC = new boolean[2];
+    //4.创建一个String类型的数组,该数组名称arrayD,存储3个String数据
+    String[] arrayD = new String[]{"a", "b", "c"};
 
-        //标准格式的静态初始化数组,可以分为两步完成
-        int[] arrB;
-        arrB = new int[]{10, 20};
-        arrB = new int[]{100, 200, 300};
-        //arrB = new double[]{100,200,300};//错误的,数据类型不匹配
+    System.out.println("-----------------------");
+    //动态初始化数组,可以分为两步完成
+    float[] arrA;
+    arrA = new float[3];
+    arrA = new float[30];
 
-        //简化格式的静态态初始化数组,不可以分为两步完成
-        int[] arrC;
-        //arrC = {1,2,3,5};//不允许
+    //标准格式的静态初始化数组,可以分为两步完成
+    int[] arrB;
+    arrB = new int[]{10, 20};
+    arrB = new int[]{100, 200, 300};
+    //arrB = new double[]{100,200,300};//错误的,数据类型不匹配
 
-        //==========数组的访问==========
-        //定义int变量num,存储100
-        int num = 100;
-        System.out.println(num);//100
+    //简化格式的静态态初始化数组,不可以分为两步完成
+    int[] arrC;
+    //arrC = {1,2,3,5};//不允许
 
-        //创建int类型的数组,名称为array,存储int数据 10,20,30
-        int[] array = {10, 20, 30};//10的编号0,20的编号1,30的编号2
+    //==========数组的访问==========
+    //定义int变量num,存储100
+    int num = 100;
+    System.out.println(num);//100
 
-        System.out.println(array);//在内存空间的地址值: [I@1540e19d
+    //创建int类型的数组,名称为array,存储int数据 10,20,30
+    int[] array = {10, 20, 30};//10的编号0,20的编号1,30的编号2
 
-        //打印10
-        System.out.println(array[0]);//打印数组array中的索引编号为0的元素值:10
-        //打印20
-        System.out.println(array[1]);//打印数组array中的索引编号为1的元素值:20
-        //打印30
-        System.out.println(array[2]);//打印数组array中的索引编号为2的元素值:30
+    System.out.println(array);//在内存空间的地址值: [I@1540e19d
 
-        //把10 改成 100
-        array[0] = 100;//把int数字100赋值给数组array中的索引为0的元素中
-        //把20 改成 200
-        array[1] = 200;//把int数字200赋值给数组array中的索引为1的元素中
-        //把30 改成 300
-        array[2] = 300;//把int数字300赋值给数组array中的索引为2的元素中
+    //打印10
+    System.out.println(array[0]);//打印数组array中的索引编号为0的元素值:10
+    //打印20
+    System.out.println(array[1]);//打印数组array中的索引编号为1的元素值:20
+    //打印30
+    System.out.println(array[2]);//打印数组array中的索引编号为2的元素值:30
 
-        System.out.println(array);//在内存空间的地址值: [I@1540e19d
+    //把10 改成 100
+    array[0] = 100;//把int数字100赋值给数组array中的索引为0的元素中
+    //把20 改成 200
+    array[1] = 200;//把int数字200赋值给数组array中的索引为1的元素中
+    //把30 改成 300
+    array[2] = 300;//把int数字300赋值给数组array中的索引为2的元素中
 
-        //打印100
-        System.out.println(array[0]);//打印数组array中的索引编号为0的元素值:100
-        //打印200
-        System.out.println(array[1]);//打印数组array中的索引编号为1的元素值:200
-        //打印300
-        System.out.println(array[2]);//打印数组array中的索引编号为2的元素值:300
+    System.out.println(array);//在内存空间的地址值: [I@1540e19d
 
-        //获取数组的长度
-        int count = array.length;
-        System.out.println("数组中元素的个数: " + count);
+    //打印100
+    System.out.println(array[0]);//打印数组array中的索引编号为0的元素值:100
+    //打印200
+    System.out.println(array[1]);//打印数组array中的索引编号为1的元素值:200
+    //打印300
+    System.out.println(array[2]);//打印数组array中的索引编号为2的元素值:300
 
+    //获取数组的长度
+    int count = array.length;
+    System.out.println("数组中元素的个数: " + count);
+
+  }
+
+  /**
+   * Java数组的三种打印方式
+   */
+  @Test
+  public void printArray() {
+    int[] array = {1, 2, 3, 4, 5, 6};
+    //传统的for循环方式
+    for (int i = 0; i < array.length; i++) {
+      System.out.println(array[i]);
     }
+    //for each循环
+    for (int i : array) {
+      System.out.println(array[i]);
+    }
+    //利用Array类中的toString方法
+    System.out.println(Arrays.toString(array));
+  }
 }

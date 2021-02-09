@@ -46,5 +46,49 @@ public class Iterator {
     System.out.println(next);
 
   }
+
+  /**
+   * 遍历集合的方式
+   */
+  @Test
+  public void Traverse() {
+    ArrayList<Integer> arrayList = new ArrayList<>();
+    for (int i = 0; i < 5; i++) {
+      arrayList.add(i);
+    }
+
+    //普通for循环
+    System.out.print("1.集合中的元素是:[");
+    for (int i = 0; i < arrayList.size(); i++) {
+      System.out.println(i + ",");
+    }
+    System.out.println("]");
+
+    //增强for
+    System.out.print("2.集合中的元素是:[");
+    for (Integer list : arrayList) {
+      System.out.println(list + ",");
+    }
+    System.out.println("]");
+
+    //迭代器一
+    System.out.print("3.集合中的元素是:[");
+    java.util.Iterator<Integer> iterator = arrayList.iterator();
+    while (iterator.hasNext()) {
+      if (iterator.next() % 2 == 1) {
+        iterator.remove();
+      }
+    }
+    System.out.println(arrayList);
+
+    //迭代写法二
+    for (java.util.Iterator<Integer> it = arrayList.iterator();
+        it.hasNext(); ) {
+      if (it.next() % 2 == 1) {
+        it.remove();
+      }
+    }
+    System.out.println(arrayList);
+  }
 }
 
